@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="500dp">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="horizontal"
+        android:id="@+id/h_layout">
+
+    </FrameLayout>
+    </ScrollView>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="144px"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        android:background="#fafafa"
+        android:layout_alignParentBottom="true"
+        >
+
+        <Button
+            android:layout_width="70dp"
+            android:id="@+id/h_order"
+            android:layout_height="100px"
+            android:text="@string/fa_orders"
+            android:textSize="25.8sp"
+            android:textColor="#c7c7c7"
+            android:layout_marginLeft="4dp"
+            android:background="@android:color/transparent"/>
+
+        <Button
+            android:id="@+id/h_portfolio"
+            android:layout_width="70dp"
+            android:layout_height="100px"
+            android:text="@string/fa_portfolio"
+            android:textColor="#c7c7c7"
+            android:textSize="25.5sp"
+            android:background="@android:color/transparent"
+            android:layout_marginLeft="2dp"/>
+
+
+        <Button
+            android:id="@+id/h_home"
+            android:layout_width="70dp"
+            android:layout_height="100px"
+            android:text="@string/fa_home"
+            android:textColor="#c7c7c7"
+            android:textSize="29sp"
+            android:background="@android:color/transparent"
+            android:layout_marginLeft="2dp"/>
+
+
+        <Button
+            android:id="@+id/h_accounts"
+            android:layout_width="70dp"
+            android:layout_height="100px"
+            android:text="@string/fa_account"
+            android:textColor="#c7c7c7"
+            android:textSize="23.2sp"
+            android:background="@android:color/transparent"
+            android:layout_marginLeft="2dp"/>
+
+
+        <Button
+            android:id="@+id/h_settings"
+            android:layout_width="70dp"
+            android:layout_height="100px"
+            android:text="@string/fa_settings"
+            android:textColor="#c7c7c7"
+            android:textSize="26.5sp"
+            android:background="@android:color/transparent"
+            android:layout_marginLeft="2dp"/>
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>
