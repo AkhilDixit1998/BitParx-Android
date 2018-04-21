@@ -1,9 +1,12 @@
 package com.akhil.akhildixit.bits.fragments;
 
 import android.annotation.SuppressLint;
+
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -11,6 +14,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.Toast;
 
 import com.akhil.akhildixit.bits.R;
@@ -36,6 +45,14 @@ import static android.widget.GridLayout.HORIZONTAL;
 
 public class Home_Fragment extends Fragment {
 
+    Button btcMarket,ethMarket;
+    ImageView arrowBtc,arrowEth;
+    FrameLayout popup;
+    Button buyBtn,sellBtn;
+    Button close;
+    RelativeLayout sell;
+    ScrollView buy;
+    View viewlayout;
     RecyclerView recyclerView;
     RecyclerView.Adapter adapter;
     RecyclerView.LayoutManager mLayoutManager;
@@ -52,15 +69,61 @@ public class Home_Fragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view=inflater.inflate(R.layout.fragment_home, container, false);
+        viewlayout=view;
         recyclerView=view.findViewById(R.id.buySellList);
+        btcMarket=view.findViewById(R.id.home_btcMarket);
+        ethMarket=view.findViewById(R.id.home_ethMarket);
 
+        arrowBtc=view.findViewById(R.id.arrowBtc);
+        arrowEth=view.findViewById(R.id.arrowEth);
         mLayoutManager=new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setVisibility(View.GONE);
+        buyBtn=view.findViewById(R.id.popUp_buyButton);
+        sellBtn=view.findViewById(R.id.popUp_sellButton);
 
+        close=view.findViewById(R.id.popUpClose);
+        popup=view.findViewById(R.id.popUp);
+        sell=view.findViewById(R.id.popUp_sell);
+        buy=view.findViewById(R.id.popUp_buy);
+        initialiseListeners(view);
         return view;
     }
 
+    public void initialiseListeners(View view)
+    {
+        btcMarket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fragmentManager=getFragmentManager();
+                FragmentTransaction transaction=fragmentManager.beginTransaction();
+
+            }
+        });
+        buyBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                buy.setVisibility(View.VISIBLE);
+                sell.setVisibility(View.GONE);
+            }
+        });
+
+        sellBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                buy.setVisibility(View.GONE);
+                sell.setVisibility(View.VISIBLE);
+            }
+        });
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                popup.setVisibility(View.GONE);
+                }
+        });
+
+
+    }
     @SuppressLint("StaticFieldLeak")
     public void fetchInitialData()
     {
@@ -90,7 +153,7 @@ public class Home_Fragment extends Fragment {
                    e.printStackTrace();
                }
                Log.e("AR","size "+arrayList.size());
-               adapter=new CustomBuySell(arrayList);
+               adapter=new CustomBuySell(arrayList,viewlayout);
                    recyclerView.setAdapter(adapter);
                    adapter.notifyDataSetChanged();
                recyclerView.setVisibility(View.VISIBLE);

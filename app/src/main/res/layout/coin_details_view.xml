@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    android:background="@drawable/button_border"
+    android:padding="5dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/coinImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/instabg"/>
+    <TextView
+        android:id="@+id/tvCoinName"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Coin Name"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"/>
+    <TextView
+        android:id="@+id/tvQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quan"
+        android:layout_marginLeft="20dp"/>
+        <TextView
+            android:id="@+id/tvAbb"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Abbr"
+            android:layout_marginLeft="2dp"/>
+    <TextView
+        android:id="@+id/tvPerc"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Perc"
+        android:layout_marginLeft="20dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp">
+    <TextView
+        android:id="@+id/tvBuy"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.SearchResult.Subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buy@"/>
+        <TextView
+            android:id="@+id/tvBuyBTC"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In BTC"/>
+        <TextView
+            android:id="@+id/tvBuyRupees"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In Rupees"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp">
+        <TextView
+            android:id="@+id/tvSell"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.SearchResult.Subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sell@"/>
+        <TextView
+            android:id="@+id/tvSellBTC"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In BTC"/>
+        <TextView
+            android:id="@+id/tvSellRupees"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In Rupees"/>
+    </LinearLayout>
+</LinearLayout>

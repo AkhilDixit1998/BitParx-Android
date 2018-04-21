@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/layoutVerifyNumber"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_margin="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VERIFY MOBILE NUMBER"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="50dp"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="serif"/>
+        <TextView
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="OTP has been sent to your mobile number please enter it here"
+            android:gravity="center"/>
+
+        <me.philio.pinentry.PinEntryView
+            android:id="@+id/pin_entry_simple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:digitWidth="35dp"
+            app:digitHeight="35dp"
+            app:mask=""
+            app:digitSpacing="10dp"
+            android:layout_marginTop="20dp"
+            app:accentType="none"
+            app:numDigits="6"
+            app:digitTextSize="8sp"
+            app:pinInputType="number"
+            app:digitBackground="@drawable/button_create" />
+       </LinearLayout>
+
+</RelativeLayout>

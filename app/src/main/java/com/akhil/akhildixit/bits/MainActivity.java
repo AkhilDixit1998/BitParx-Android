@@ -20,12 +20,13 @@ import com.akhil.akhildixit.bits.fragments.Settings_Fragment;
 
 import java.util.ArrayList;
 
-public class MainActivity  extends AppCompatActivity implements Account_Fragment.OnFragmentInteractionListener,Order_Fragment.OnFragmentInteractionListener,Settings_Fragment.OnFragmentInteractionListener,Portfolio_Fragment.OnFragmentInteractionListener,View.OnClickListener{
+public class MainActivity  extends AppCompatActivity implements Order_Fragment.OnFragmentInteractionListener,Settings_Fragment.OnFragmentInteractionListener,Portfolio_Fragment.OnFragmentInteractionListener,View.OnClickListener{
 
     Button home,account,settings,portfolio,order;
     ArrayList<Fragment> backStack=new ArrayList<>();
     ArrayList<Fragment> fragmentList=new ArrayList<>();
     Fragment lastTab;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

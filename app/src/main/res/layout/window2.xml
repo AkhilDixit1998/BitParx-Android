@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:id="@+id/layoutVerifyEmail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="30dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A verification link has been sent to your email-id. Click on the link to get your email verified"
+            android:textAlignment="center"
+            android:layout_marginTop="80dp"
+            android:textSize="18sp"
+            android:padding="5dp"
+            android:textColor="@color/colorBlack"
+            android:background="@drawable/button_border" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:textColorHint="@color/colorBlack"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat">
+            <EditText
+                android:id="@+id/edMobNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                />
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+</RelativeLayout>

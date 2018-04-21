@@ -1,33 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.Account_Fragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:text="ACCOUNT"/>
-    <LinearLayout
+    <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:id="@+id/accountList">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
+        android:visibility="gone"
+        android:id="@+id/accountPopUp"
+        android:layout_marginTop="120dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="#bdc3c7"
+        android:layout_height="300dp"
+        android:layout_marginTop="40dp"
         android:orientation="vertical">
-        <EditText
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            />
-        <EditText
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/dollar"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="BITCOIN"
+                android:paddingTop="5dp"
+                android:textSize="16dp"/>
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
+            android:layout_height="45dp">
+        <TextView
+            android:layout_width="80dp"
             android:layout_height="50dp"
-            />
+            android:textSize="19dp"
+            android:layout_marginLeft="28dp"
+            android:text="Quantity" />
 
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+           android:layout_marginTop="15dp"
+            android:layout_marginLeft="50dp"
             />
+        </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:textSize="19dp"
+                android:layout_marginLeft="28dp"
+                android:text="Send To" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="50dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="vertical"
+            android:layout_marginLeft="140dp">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/camera"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="16dp"
+                android:text="Scan QR code"/>
+        </LinearLayout>
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:text="send"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="280dp"/>
     </LinearLayout>
 
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/account_popUp_close"
+            android:background="@drawable/close"
+            android:layout_marginLeft="320dp"
+            android:layout_marginTop="25dp"/>
+    </FrameLayout>
 
-</android.support.constraint.ConstraintLayout>
+</FrameLayout>

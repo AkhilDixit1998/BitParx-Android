@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BITPARX"
+                android:textColor="@color/colorPrimaryDark"
+                android:fontFamily="serif"
+                android:textStyle="bold"
+                android:textSize="35sp"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+            <TextView
+                android:layout_marginTop="100dp"
+                android:id="@+id/tvLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LOGIN"
+                android:textColor="@color/colorLightBlue"
+                android:fontFamily="serif-monospace"
+                android:textStyle="bold"
+                android:textSize="35sp"
+                />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:paddingLeft="20dp"
+                android:textColorHint="@color/colorLightBlue"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat">
+
+                <EditText
+                    android:id="@+id/edEmailIdLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email ID"
+                    android:inputType="textEmailAddress"
+                    android:textSize="20dp" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:textColorHint="@color/colorLightBlue"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/colorLightBlue"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat">
+                <EditText
+                    android:id="@+id/edPasswordLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    />
+            </android.support.design.widget.TextInputLayout>
+            <Button
+                android:id="@+id/btnLoginToAccount"
+                android:layout_marginTop="40dp"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:text="login"
+                android:textSize="20sp"
+                android:fontFamily="serif"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/button_login"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
